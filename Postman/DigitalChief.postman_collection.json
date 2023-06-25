@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "235d26de-61ef-4df6-b968-39ff6b3c6351",
+		"name": "DigitalChief",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20646976"
+	},
+	"item": [
+		{
+			"name": "Get All Universities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/university/getAllUniversity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"university",
+						"getAllUniversity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new University",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"universityName\": \"BSUIR\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minsk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"123123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/university/addNewUniversity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"university",
+						"addNewUniversity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update University",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":  \"1\",\r\n    \"universityName\": \"BSUIR\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minskkkkk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"`122\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/university/updateUniversity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"university",
+						"updateUniversity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete University",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/university/removeUniversityById/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"university",
+						"removeUniversityById",
+						"5"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Facultyes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/faculty/getAllFaculties",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty",
+						"getAllFaculties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"facultyName\": \"ФКП\",\r\n    \"minScore\": \"51\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"deanName\": \"123\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/faculty/addNewFaculty/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty",
+						"addNewFaculty",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Faculty",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"10\",\r\n    \"facultyName\": \"ФКП\",\r\n    \"minScore\": \"5100\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"deanName\": \"123\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/faculty/updateFaculty",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty",
+						"updateFaculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Faculty",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/faculty/removeFacultyById/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty",
+						"removeFacultyById",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Faculties By Univeresity Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/faculty/getAllByUniversityId/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"faculty",
+						"getAllByUniversityId",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Speciality",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/speciality/getAllSpeciality",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"speciality",
+						"getAllSpeciality"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Specialities By Faculty Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/speciality/getAllByUniversityId/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"speciality",
+						"getAllByUniversityId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save New Speciality",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"specialtyName\": \"ИСИТ в БМ\",\r\n    \"minScore\": \"200\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"degreeLevel\": \"Бакалавр\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/speciality/addNewSpeciality/11",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"speciality",
+						"addNewSpeciality",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Speciality",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"13\",\r\n    \"specialtyName\": \"ИСИТ в БМ\",\r\n    \"minScoree\": \"200\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"degreeLevel\": \"Магистр\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/speciality/updateSpeciality",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"speciality",
+						"updateSpeciality"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delte Speciality",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/speciality/removeSpecialityById/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"speciality",
+						"removeSpecialityById",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
