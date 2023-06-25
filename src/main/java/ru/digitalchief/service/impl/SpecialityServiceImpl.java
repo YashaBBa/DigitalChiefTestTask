@@ -11,7 +11,6 @@ import ru.digitalchief.repo.SpecialityJpaRepo;
 import ru.digitalchief.service.FacultyService;
 import ru.digitalchief.service.SpecialityService;
 
-import javax.persistence.NoResultException;
 import java.util.List;
 
 @RequiredArgsConstructor

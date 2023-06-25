@@ -24,7 +24,7 @@ public class SpecialityController {
 
     @GetMapping("/getAllByUniversityId/{id}")
     public List<Speciality> findAllSpecialitiesByFacultyId(@PathVariable Integer id) {
-        log.debug("Fetching all faculty entities with faculty id {}",id);
+        log.debug("Fetching all faculty entities with faculty id {}", id);
         return specialityService.findAllSpecialitiesByFacultyId(id);
     }
 
@@ -37,7 +37,7 @@ public class SpecialityController {
 
     @PutMapping("/updateSpeciality")
     public ResponseEntity<String> updateFaculty(@RequestBody Speciality speciality) {
-        log.debug("Update speciality entity with id {}",speciality.getId());
+        log.debug("Update speciality entity with id {}", speciality.getId());
         String message = specialityService.updateSpecialityData(speciality);
         return ResponseEntity.ok(message);
 
@@ -45,7 +45,7 @@ public class SpecialityController {
 
     @DeleteMapping("/removeSpecialityById/{id}")
     public ResponseEntity<String> removeFacultyById(@PathVariable Integer id) {
-        log.debug("Remove speciality entity with id {}",id);
+        log.debug("Remove speciality entity with id {}", id);
         String message = specialityService.removeSpeciality(id);
         return ResponseEntity.ok(message);
     }

@@ -24,13 +24,17 @@ public class University {
 
     @Column(name = "name")
     private String universityName;
+
     @Column(name = "country")
     private String countryName;
+
     @Column(name = "city")
     private String cityName;
+
     @Column(name = "founding_date")
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date foundingDate;
+
     @Column(name = "numberOfStudents")
     private Integer numberOfStudents;
 

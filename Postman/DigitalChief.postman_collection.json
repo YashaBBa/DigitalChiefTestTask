@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"universityName\": \"BSUIR\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minsk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"123123\"\r\n\r\n}",
+					"raw": "{\r\n    \"universityName\": \"BSUIRr\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minsk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"123123\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -62,7 +62,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":  \"1\",\r\n    \"universityName\": \"BSUIR\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minskkkkk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"`122\"\r\n\r\n}",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"universityName\": \"BSUIR\",\r\n    \"countryName\": \"Belarus\",\r\n    \"cityName\": \"Minskkkk\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"numberOfStudents\": \"123123\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -90,7 +90,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/university/removeUniversityById/5",
+					"raw": "localhost:8080/api/university/removeUniversityById/1",
 					"host": [
 						"localhost"
 					],
@@ -99,7 +99,7 @@
 						"api",
 						"university",
 						"removeUniversityById",
-						"5"
+						"1"
 					],
 					"query": [
 						{
@@ -147,7 +147,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/faculty/addNewFaculty/9",
+					"raw": "localhost:8080/api/faculty/addNewFaculty/1",
 					"host": [
 						"localhost"
 					],
@@ -156,7 +156,7 @@
 						"api",
 						"faculty",
 						"addNewFaculty",
-						"9"
+						"1"
 					]
 				}
 			},
@@ -169,7 +169,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"10\",\r\n    \"facultyName\": \"ФКП\",\r\n    \"minScore\": \"5100\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"deanName\": \"123\"\r\n\r\n\r\n}",
+					"raw": "{\r\n    \"id\": \"2\",\r\n    \"facultyName\": \"ФКП\",\r\n    \"minScore\": \"5100\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"deanName\": \"123\"\r\n\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -197,7 +197,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/faculty/removeFacultyById/10",
+					"raw": "localhost:8080/api/faculty/removeFacultyById/2",
 					"host": [
 						"localhost"
 					],
@@ -206,7 +206,7 @@
 						"api",
 						"faculty",
 						"removeFacultyById",
-						"10"
+						"2"
 					]
 				}
 			},
@@ -218,7 +218,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/faculty/getAllByUniversityId/9",
+					"raw": "localhost:8080/api/faculty/getAllByUniversityId/1",
 					"host": [
 						"localhost"
 					],
@@ -227,7 +227,7 @@
 						"api",
 						"faculty",
 						"getAllByUniversityId",
-						"9"
+						"1"
 					]
 				}
 			},
@@ -259,7 +259,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/speciality/getAllByUniversityId/1",
+					"raw": "localhost:8080/api/speciality/getAllByUniversityId/2",
 					"host": [
 						"localhost"
 					],
@@ -268,7 +268,7 @@
 						"api",
 						"speciality",
 						"getAllByUniversityId",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -289,7 +289,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/speciality/addNewSpeciality/11",
+					"raw": "localhost:8080/api/speciality/addNewSpeciality/2",
 					"host": [
 						"localhost"
 					],
@@ -298,7 +298,7 @@
 						"api",
 						"speciality",
 						"addNewSpeciality",
-						"11"
+						"2"
 					]
 				}
 			},
@@ -311,7 +311,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"13\",\r\n    \"specialtyName\": \"ИСИТ в БМ\",\r\n    \"minScoree\": \"200\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"degreeLevel\": \"Магистр\"\r\n\r\n}",
+					"raw": "{\r\n    \"id\": \"3\",\r\n    \"specialtyName\": \"ИСИТ в БМ\",\r\n    \"minScoree\": \"200\",\r\n    \"countOfStudents\": \"301\",\r\n    \"foundingDate\": \"20-10-2002\",\r\n    \"degreeLevel\": \"Магистр\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -339,7 +339,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/speciality/removeSpecialityById/13",
+					"raw": "localhost:8080/api/speciality/removeSpecialityById/3",
 					"host": [
 						"localhost"
 					],
@@ -348,7 +348,7 @@
 						"api",
 						"speciality",
 						"removeSpecialityById",
-						"13"
+						"3"
 					]
 				}
 			},

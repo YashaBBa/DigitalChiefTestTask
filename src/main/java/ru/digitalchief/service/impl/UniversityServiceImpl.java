@@ -11,9 +11,7 @@ import ru.digitalchief.model.University;
 import ru.digitalchief.repo.UniversityJPARepo;
 import ru.digitalchief.service.UniversityService;
 
-import javax.persistence.NoResultException;
 import java.util.List;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -39,7 +37,7 @@ public class UniversityServiceImpl implements UniversityService {
         //if university not exists
         // will be equals true
         boolean isExists = existsByName(university.getUniversityName());
-        if(isExists){
+        if (isExists) {
             log.debug("Saving university entity");
             universityJPARepo.save(university);
 

@@ -38,7 +38,7 @@ public class FacultyController {
 
     @PutMapping("/updateFaculty")
     public ResponseEntity<String> updateFaculty(@RequestBody Faculty faculty) {
-        log.debug("Update faulty entity with id {}",faculty.getId());
+        log.debug("Update faulty entity with id {}", faculty.getId());
         String message = facultyService.updateFacultyData(faculty);
         return ResponseEntity.ok(message);
 
@@ -46,7 +46,7 @@ public class FacultyController {
 
     @DeleteMapping("/removeFacultyById/{id}")
     public ResponseEntity<String> removeFacultyById(@PathVariable Integer id) {
-        log.debug("Remove faulty entity with id {}",id);
+        log.debug("Remove faulty entity with id {}", id);
         String message = facultyService.removeFaculty(id);
         return ResponseEntity.ok(message);
     }

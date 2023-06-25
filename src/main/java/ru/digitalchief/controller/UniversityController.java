@@ -32,7 +32,7 @@ public class UniversityController {
 
     @PutMapping("/updateUniversity")
     public ResponseEntity<String> updateUniversity(@RequestBody University university) {
-        log.debug("Update new university entity with id {}",university.getId());
+        log.debug("Update new university entity with id {}", university.getId());
         String message = universityService.updateUniversityData(university);
         return ResponseEntity.ok(message);
 
@@ -40,7 +40,7 @@ public class UniversityController {
 
     @DeleteMapping("/removeUniversityById/{id}")
     public ResponseEntity<String> removeUniversityById(@PathVariable Integer id) {
-        log.debug("Remove new university entity with id {}",id);
+        log.debug("Remove new university entity with id {}", id);
         String message = universityService.removeUniversity(id);
         return ResponseEntity.ok(message);
     }

@@ -1,11 +1,9 @@
 package ru.digitalchief.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import ru.digitalchief.model.Faculty;
 
-import javax.persistence.Column;
 import java.sql.Date;
 
 @Data
