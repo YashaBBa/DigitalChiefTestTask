@@ -12,15 +12,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/university/getAllUniversity",
+					"raw": "localhost:8080/api/universities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"university",
-						"getAllUniversity"
+						"universities"
 					]
 				}
 			},
@@ -41,15 +40,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/university/addNewUniversity",
+					"raw": "localhost:8080/api/universities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"university",
-						"addNewUniversity"
+						"universities"
 					]
 				}
 			},
@@ -70,15 +68,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/university/updateUniversity",
+					"raw": "localhost:8080/api/universities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"university",
-						"updateUniversity"
+						"universities"
 					]
 				}
 			},
@@ -90,15 +87,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/university/removeUniversityById/1",
+					"raw": "localhost:8080/api/universities/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"university",
-						"removeUniversityById",
+						"universities",
 						"1"
 					],
 					"query": [
@@ -118,15 +114,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/faculty/getAllFaculties",
+					"raw": "localhost:8080/api/faculties",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"faculty",
-						"getAllFaculties"
+						"faculties"
 					]
 				}
 			},
@@ -147,16 +142,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/faculty/addNewFaculty/1",
+					"raw": "localhost:8080/api/universities/1/faculties",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"faculty",
-						"addNewFaculty",
-						"1"
+						"universities",
+						"1",
+						"faculties"
 					]
 				}
 			},
@@ -177,15 +172,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/faculty/updateFaculty",
+					"raw": "localhost:8080/api/faculties",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"faculty",
-						"updateFaculty"
+						"faculties"
 					]
 				}
 			},
@@ -197,15 +191,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/faculty/removeFacultyById/2",
+					"raw": "localhost:8080/api/faculties/2",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"faculty",
-						"removeFacultyById",
+						"faculties",
 						"2"
 					]
 				}
@@ -218,16 +211,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/faculty/getAllByUniversityId/1",
+					"raw": "localhost:8080/api/universities/1/faculties",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"faculty",
-						"getAllByUniversityId",
-						"1"
+						"universities",
+						"1",
+						"faculties"
 					]
 				}
 			},
@@ -239,15 +232,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/speciality/getAllSpeciality",
+					"raw": "localhost:8080/api/specialities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"speciality",
-						"getAllSpeciality"
+						"specialities"
 					]
 				}
 			},
@@ -259,16 +251,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/speciality/getAllByUniversityId/2",
+					"raw": "localhost:8080/api/faculties/2/specialities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"speciality",
-						"getAllByUniversityId",
-						"2"
+						"faculties",
+						"2",
+						"specialities"
 					]
 				}
 			},
@@ -289,16 +281,16 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/speciality/addNewSpeciality/2",
+					"raw": "localhost:8080/api/faculties/2/specialities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"speciality",
-						"addNewSpeciality",
-						"2"
+						"faculties",
+						"2",
+						"specialities"
 					]
 				}
 			},
@@ -319,15 +311,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/speciality/updateSpeciality",
+					"raw": "localhost:8080/api/specialities",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"speciality",
-						"updateSpeciality"
+						"specialities"
 					]
 				}
 			},
@@ -339,15 +330,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/speciality/removeSpecialityById/3",
+					"raw": "localhost:8080/api/specialities/3",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"speciality",
-						"removeSpecialityById",
+						"specialities",
 						"3"
 					]
 				}

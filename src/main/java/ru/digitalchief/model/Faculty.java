@@ -37,6 +37,7 @@ public class Faculty {
     @JoinColumn(name = "univers_id")
     @JsonIgnore
     private University university;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "faculty")
     private List<Speciality> specilaityList;
 

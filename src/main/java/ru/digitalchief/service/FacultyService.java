@@ -8,14 +8,13 @@ import java.util.List;
 public interface FacultyService {
     List<FacultyDto> findAllFaculties();
 
+    void saveNewFaculty(Faculty faculty, Integer id);
 
-    String saveNewFaculty(Faculty faculty, Integer id);
-
-    String updateFacultyData(Faculty faculty);
+    void updateFacultyData(Faculty faculty);
 
     Faculty findFacultyById(Integer id);
 
-    String removeFaculty(Integer id);
+    void removeFaculty(Integer id);
 
     List<Faculty> findAllFacultiesByUniversityId(Integer id);
 }

@@ -10,20 +10,10 @@ import java.sql.Date;
 @AllArgsConstructor
 public class FacultyDto {
     private Integer id;
-
-
     private String facultyName;
-
-
     private Date foundingDate;
-
-
     private Integer minScore;
-
-
     private Integer countOfStudents;
-
-
     private String deanName;
 
     public FacultyDto(Faculty faculty) {

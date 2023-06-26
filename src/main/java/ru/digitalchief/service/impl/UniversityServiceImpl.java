@@ -28,29 +28,24 @@ public class UniversityServiceImpl implements UniversityService {
     public List<UniversityDto> getAllUniversity() {
         log.debug("Fetching all university entities");
         List<UniversityDto> universities = universityJPARepo.findBy();
-
         return universities;
     }
 
     @Override
-    public String saveNewUniversity(University university) {
+    public void saveNewUniversity(University university) {
         //if university not exists
         // will be equals true
         boolean isExists = existsByName(university.getUniversityName());
         if (isExists) {
             log.debug("Saving university entity");
             universityJPARepo.save(university);
-
         }
-        return String.format("University With name '%s' Was Created!", university.getUniversityName());
-
     }
 
     @Override
-    public String updateUniversityData(University university) {
+    public void updateUniversityData(University university) {
         log.debug("Updating university entity with id {}", university.getId());
         University oldVersionOfUniversity = findUniversityById(university.getId());
-
         if (!university.getCityName().isEmpty()) {
             oldVersionOfUniversity.setCityName(university.getCityName());
         }
@@ -67,26 +62,21 @@ public class UniversityServiceImpl implements UniversityService {
             oldVersionOfUniversity.setUniversityName(university.getUniversityName());
         }
         universityJPARepo.save(oldVersionOfUniversity);
-        return String.format("University With id=%s Was Updated!", university.getId());
     }
 
     @Override
     public University findUniversityById(Integer id) {
         log.debug("Fetching university entity with id {}", id);
-
         University university = universityJPARepo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format(entityNotFoundMessage, id)));
         return university;
-
-
     }
 
     @Override
-    public String removeUniversity(Integer id) {
+    public void removeUniversity(Integer id) {
         log.debug("Removing university entity with id {}", id);
         University university = findUniversityById(id);
         universityJPARepo.delete(university);
-        return String.format("University with id=%s was removed!", id);
     }
 
     @Override
@@ -99,6 +89,5 @@ public class UniversityServiceImpl implements UniversityService {
             log.info("University with name {} already exist", name);
             throw new EntityAlreadyExistsException(String.format(entityAlreadyExistsMessage, name));
         }
-
     }
 }

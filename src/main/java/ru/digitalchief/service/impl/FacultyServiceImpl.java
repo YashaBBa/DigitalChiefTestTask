@@ -32,16 +32,15 @@ public class FacultyServiceImpl implements FacultyService {
     }
 
     @Override
-    public String saveNewFaculty(Faculty faculty, Integer universityId) {
+    public void saveNewFaculty(Faculty faculty, Integer universityId) {
         log.debug("Saving faculty entity with university id {}", universityId);
         University university = universityService.findUniversityById(universityId);
         faculty.setUniversity(university);
         facultyJpaRepo.save(faculty);
-        return String.format("Faculty With name '%s' Was Created!", faculty.getFacultyName());
     }
 
     @Override
-    public String updateFacultyData(Faculty faculty) {
+    public void updateFacultyData(Faculty faculty) {
         log.debug("Updating faculty entity with id {}", faculty.getId());
         Faculty oldFacultyData = findFacultyById(faculty.getId());
         if (!faculty.getFacultyName().isEmpty()) {
@@ -60,25 +59,21 @@ public class FacultyServiceImpl implements FacultyService {
             oldFacultyData.setDeanName(faculty.getDeanName());
         }
         facultyJpaRepo.save(oldFacultyData);
-        return String.format("Faculty With id=%s Was Updated!", faculty.getId());
     }
 
     @Override
     public Faculty findFacultyById(Integer id) {
         log.info("Fetching faculty entity by id {}", id);
-
         Faculty faculty = facultyJpaRepo.findById(id).orElseThrow(() ->
                 new EntityNotFoundException(String.format(entityNotFoundMessage, id)));
         return faculty;
-
     }
 
     @Override
-    public String removeFaculty(Integer id) {
+    public void removeFaculty(Integer id) {
         log.info("Removing faculty entity by id {}", id);
         Faculty faculty = findFacultyById(id);
         facultyJpaRepo.delete(faculty);
-        return String.format("Faculty with id=%s was removed!", id);
     }
 
     @Override

@@ -17,9 +17,9 @@ import java.util.List;
 @Service
 @Slf4j
 public class SpecialityServiceImpl implements SpecialityService {
+
     private final SpecialityJpaRepo specialityJpaRepo;
     private final FacultyService facultyService;
-
 
     @Value("${exception.message.entityNotFound}")
     private String entityNotFoundMessage;
@@ -31,17 +31,16 @@ public class SpecialityServiceImpl implements SpecialityService {
     }
 
     @Override
-    public String saveNewSpeciality(Speciality speciality, Integer facultyID) {
-        log.debug("Saving speciality entity with faculty id {}",facultyID);
+    public void saveNewSpeciality(Speciality speciality, Integer facultyID) {
+        log.debug("Saving speciality entity with faculty id {}", facultyID);
         Faculty faculty = facultyService.findFacultyById(facultyID);
         speciality.setFaculty(faculty);
         specialityJpaRepo.save(speciality);
-        return String.format("Speciality With name '%s' Was Created!", speciality.getSpecialtyName());
     }
 
     @Override
-    public String updateSpecialityData(Speciality speciality) {
-        log.debug("Updating speciality entity with id {}",speciality.getId());
+    public void updateSpecialityData(Speciality speciality) {
+        log.debug("Updating speciality entity with id {}", speciality.getId());
         Speciality oldSpecialityData = findSpecialityById(speciality.getId());
         if (!speciality.getSpecialtyName().isEmpty()) {
             oldSpecialityData.setSpecialtyName(speciality.getSpecialtyName());
@@ -59,31 +58,26 @@ public class SpecialityServiceImpl implements SpecialityService {
             oldSpecialityData.setCountOfStudents(speciality.getCountOfStudents());
         }
         specialityJpaRepo.save(oldSpecialityData);
-        return String.format("Speciality With id=%s Was Updated!", speciality.getId());
     }
 
     @Override
     public Speciality findSpecialityById(Integer id) {
-        log.info("Fetching speciality entity by id {}",id);
-
-            Speciality speciality = specialityJpaRepo.findById(id).orElseThrow(() ->
-                    new EntityNotFoundException(String.format(entityNotFoundMessage, id)));
-            return speciality;
-
-
+        log.info("Fetching speciality entity by id {}", id);
+        Speciality speciality = specialityJpaRepo.findById(id).orElseThrow(() ->
+                new EntityNotFoundException(String.format(entityNotFoundMessage, id)));
+        return speciality;
     }
 
     @Override
-    public String removeSpeciality(Integer id) {
-        log.info("Removing speciality entity by id {}",id);
+    public void removeSpeciality(Integer id) {
+        log.info("Removing speciality entity by id {}", id);
         Speciality speciality = findSpecialityById(id);
         specialityJpaRepo.delete(speciality);
-        return String.format("Speciality With id=%s Was Removed!", speciality.getId());
     }
 
     @Override
     public List<Speciality> findAllSpecialitiesByFacultyId(Integer id) {
-        log.debug("Fetching speciality entity with university id {}",id);
+        log.debug("Fetching speciality entity with university id {}", id);
         return specialityJpaRepo.findAllByFacultyId(id);
     }
 

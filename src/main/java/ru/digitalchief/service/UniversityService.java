@@ -8,13 +8,13 @@ import java.util.List;
 public interface UniversityService {
     List<UniversityDto> getAllUniversity();
 
-    String saveNewUniversity(University university);
+    void saveNewUniversity(University university);
 
-    String updateUniversityData(University university);
+    void updateUniversityData(University university);
 
     University findUniversityById(Integer id);
 
-    String removeUniversity(Integer id);
+    void removeUniversity(Integer id);
 
     boolean existsByName(String name);
 }

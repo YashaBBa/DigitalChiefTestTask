@@ -10,15 +10,10 @@ import java.sql.Date;
 @AllArgsConstructor
 public class UniversityDto {
     private Integer id;
-
     private String universityName;
-
     private String countryName;
-
     private String cityName;
-
     private Date foundingDate;
-
     private Integer numberOfStudents;
 
     public UniversityDto(University entity) {
