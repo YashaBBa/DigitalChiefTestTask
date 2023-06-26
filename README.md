@@ -1,3 +1,51 @@
+# Digital Chief - University Management System
+
+Digital Chief is a University Management System that helps manage universities, faculties, and specialities within an educational institution. It provides functionalities to store and retrieve information about universities, faculties, and specialities.
+
+## Domain Model
+
+The domain model consists of the following entities:
+
+### University
+
+- `id` (int, primary key): The unique identifier for the university.
+- `name` (varchar): The name of the university.
+- `city` (varchar): The city where the university is located.
+- `country` (varchar): The country where the university is located.
+- `founding_date` (date): The founding date of the university.
+- `number_of_students` (int): The total number of students in the university.
+
+### Faculty
+
+- `id` (int, primary key): The unique identifier for the faculty.
+- `name` (varchar): The name of the faculty.
+- `dean_name` (varchar): The name of the dean of the faculty.
+- `founding_date` (date): The founding date of the faculty.
+- `min_score` (int): The minimum score required for admission to the faculty.
+- `count_of_students` (int): The total number of students in the faculty.
+- `univers_id` (int, foreign key): The university to which the faculty belongs.
+
+### Speciality
+
+- `id` (int, primary key): The unique identifier for the speciality.
+- `name` (varchar): The name of the speciality.
+- `degree_level` (varchar): The level of degree offered by the speciality.
+- `founding_date` (date): The founding date of the speciality.
+- `min_score` (int): The minimum score required for admission to the speciality.
+- `count_of_students` (int): The total number of students in the speciality.
+- `faculties_id` (int, foreign key): The faculty to which the speciality belongs.
+
+## Composition
+
+The composition in the Digital Chief system is as follows:
+
+- Each university can have multiple faculties. The `univers_id` foreign key in the `faculty` table references the `id` column of the `university` table.
+- Each faculty can have multiple specialities. The `faculties_id` foreign key in the `speciality` table references the `id` column of the `faculty` table.
+
+## Usage
+
+To use the Digital Chief system, you can perform CRUD operations on the university, faculty, and speciality entities through the provided APIs. The system allows you to create, retrieve, update, and delete records for universities, faculties, and specialities.
+
 ## Getting Started
 
 To get started with this project, follow the steps below:
